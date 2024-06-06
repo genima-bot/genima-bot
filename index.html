@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="description"
         content="Generative Image as Action Models">
-  <meta name="keywords" content="Transformers, Language Grounding, Manipulation">
+  <meta name="keywords" content="Diffusion, Image Generation, Behavior Cloning, Visuomotor">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genima</title>
+  <title>GENIMA</title>
 
 
   <script>
@@ -88,7 +88,7 @@
     <div class="column is-two-thirds">
       <!-- <h2 class="title is-3">Video</h2> -->
       <div class="publication-video">
-        <iframe src="https://www.youtube.com/embed/1vpTPh3bpm8?rel=0&amp;showinfo=0"
+        <iframe src="https://www.youtube.com/embed/0MaLCvq6So0?rel=0&amp;showinfo=0"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
@@ -96,13 +96,85 @@
 
 </section>
 
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Image-generation diffusion models have been fine-tuned to unlock new capabilities such as image-editing and novel view synthesis. Can we similarly unlock image-generation models for visuomotor control? 
+            We present GENIMA, a behavior-cloning agent that fine-tunes Stable Diffusion to <b><i>“draw joint-actions”</i></b> as targets on RGB images. These images are fed into a controller that maps the visual targets into a sequence of joint-positions. 
+          </p>
+          <p>
+            We study GENIMA on 25 <a target="_blank" href="https://sites.google.com/view/rlbench">RLBench</a> and 9 real-world manipulation tasks. We find that, by lifting actions into image-space, internet pre-trained diffusion models can generate policies that outperform state- of-the-art visuomotor approaches, especially in robustness to scene perturbations and generalizing to novel objects. Our method is also competitive with 3D agents, despite lacking priors such as depth, keypoints, or motion-planners.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+
+    <!-- Animation. -->
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <h2 class="title is-3"><span class="dgenima">Genima</span></h2>
+
+        <!-- Interpolating. -->
+        <h3 class="title is-4">Fine-tuning Stable Diffusion to draw joint-actions</h3>
+        <div class="content has-text-justified">
+        <!-- <br> -->
+          <p>
+            <span class="dgenima">Genima</span> is a behavior-cloning agent that maps RGB observations and language goals to joint-position actions. <span class="dgenima">Genima</span> is composed of two-stages: (1) a diffusion agent that fine-tunes SD-Turbo with ControlNet to draw target joint-positions. These joint-positions are from the <i>t+K</i> timstep in the demonstration, and each joint is <i>rendered</i> as a uniquely-colored sphere. (2) These visual targets are fed into an ACT controller that translates the visual targets into a sequence of <i>K</i> joint-position actions. The controller is trained with random backgrounds to ignore the context and just follow targets. 
+          </p>
+          </br>
+          <img src="media/figures/genima_overview.png" class="interpolation-image" 
+           alt="Interpolate start reference image." />
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <h2 class="title is-3">Results</h2>
+  
+        <h3 class="title is-4">Semantic Generalization</h3>
+        <br>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-two-thirds">
+            <!-- <h2 class="title is-3">Video</h2> -->
+            <div class="publication-video">
+              <iframe src="https://www.youtube.com/embed/pUqBs74f_ts?rel=0&amp;showinfo=0"
+                      frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. 
+            Website template built-off <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. 
           </p>
         </div>
       </div>

@@ -297,7 +297,7 @@
         <div class="content has-text-justified">
         <!-- <br> -->
           <p>
-            <span class="dgenima">Genima</span> is a behavior-cloning agent that maps RGB observations and language goals to joint-position actions. <span class="dgenima">Genima</span> is composed of two-stages: (1) a diffusion agent that fine-tunes <a target="_blank" href="https://stability.ai/news/stability-ai-sdxl-turbo">SD-Turbo</a> with <a target="_blank" href="https://arxiv.org/abs/2302.05543">ControlNet</a> to draw target joint-positions. The joint-positions are <span class="latex">t+K</span> timsteps ahead and each joint is <i>rendered</i> as a colored sphere: <span class="base">base</span>, <span class="elbow">elbow</span>, <span class="wrist">wrist</span>, gripper <span class="gripper-open">open</span> and <span class="gripper-close">close</span>. (2) These target images are fed into an <a target="_blank" href="https://github.com/tonyzhaozh/act">ACT-based</a> controller that maps the visual targets into a sequence of <i><span class="latex">K</span></i> joint-position actions. The controller is trained with random backgrounds to ignore the context and just follow targets. 
+            <span class="dgenima">Genima</span> is a behavior-cloning agent that maps RGB observations and language goals to joint-position actions. <span class="dgenima">Genima</span> is composed of two-stages: (1) a diffusion agent that fine-tunes <a target="_blank" href="https://stability.ai/news/stability-ai-sdxl-turbo">SD-Turbo</a> with <a target="_blank" href="https://arxiv.org/abs/2302.05543">ControlNet</a> to draw target joint-positions. The joint-positions are <span class="latex">t+K</span> timsteps ahead, and each joint is <i>rendered</i> as a colored sphere: <span class="base">base</span>, <span class="elbow">elbow</span>, <span class="wrist">wrist</span>, gripper <span class="gripper-open">open</span> and <span class="gripper-close">close</span>. (2) These target images are fed into an <a target="_blank" href="https://github.com/tonyzhaozh/act">ACT-based</a> controller that maps visual targets into a sequence of <i><span class="latex">K</span></i> joint-position actions. The controller is trained with random backgrounds to ignore the context and just follow targets. 
           </p>
           </br>
           <img src="media/figures/genima_overview.png" class="interpolation-image" 
@@ -448,7 +448,7 @@
         </br>
 
         <h3 class="title is-4">Emergent Properties</h3>
-        We evaluate the same multi-task <span class="dgenima">Genima</span> and ACT agents on 6 pertubations tests from Colosseum. <span class="dgenima">Genima</span> exhibits an emergent property that reverts inputs to canonical textures and colors. This makes it robust to randomized object colors, lighting variations, distractors, and background textures.
+        We evaluate the same multi-task <span class="dgenima">Genima</span> and ACT agents on 6 pertubations tests from <a target="_blank" href="https://robot-colosseum.github.io/">Colosseum</a>. <span class="dgenima">Genima</span> exhibits an emergent property that reverts inputs to canonical textures and colors. This makes it robust to randomized object colors, lighting variations, distractors, and background textures.
         </br>
         </br>
         </br>

@@ -1,9 +1,18 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   background-color: #000000;
+  color: #ffffff;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #ffffff; 
+}
+
+.subtitle {
+   color: #ffffff; 
+}
+
+.title {
   color: #ffffff; 
 }
 
@@ -219,4 +228,97 @@ a:active {
 
 .content {
   color: #ffffff;
+}
+
+
+.latex {
+  font-family: 'Latin Modern Math', 'Computer Modern', serif;
+  font-style: italic;
+  font-size: 19px;
+}
+
+.base {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: red;
+}
+.elbow {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: limegreen;
+}
+.wrist {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: orchid;
+}
+.gripper-open {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: cyan;
+}
+.gripper-close {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: yellow;
+}
+
+
+/* Apply styles to all select elements */
+select {
+    background-color: black;
+    color: white;
+    border: 1px solid white; /* Optional: Add a white border */
+}
+
+/* Apply styles to the options inside the select elements */
+select option {
+    background-color: black;
+    color: white;
+}
+
+/* Ensure styles apply to specific classes if needed */
+.select.is-small select {
+    background-color: black;
+    color: white;
+}
+
+.select.is-small select option {
+    background-color: black;
+    color: white;
+}
+
+.b {
+  color: white;
+}
+
+/* Default state for non-selected tabs */
+.tabs.is-toggle.is-5.is-centered .tablinks a b {
+    color: grey;
+}
+
+/* Change text color to black on hover for non-selected tabs */
+.tabs.is-toggle.is-5.is-centered .tablinks:not(.selected):hover a b {
+    color: black;
+}
+
+/* Change text color to white for selected tabs */
+.tabs.is-toggle.is-5.is-centered .tablinks.selected a b {
+    color: white;
+}
+
+/* Prevent hover effect on selected tabs */
+.tabs.is-toggle.is-5.is-centered .tablinks.selected:hover a b {
+    color: grey;
+}
+
+
+a {
+    color: violet;
+    text-decoration: none; /* Remove underline, optional */
+}
+
+a:hover {
+    color: magenta;
+    text-decoration: underline; /* Add underline on hover, optional */
 }

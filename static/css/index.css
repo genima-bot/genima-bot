@@ -322,3 +322,7 @@ a:hover {
     color: magenta;
     text-decoration: underline; /* Add underline on hover, optional */
 }
+
+a:visited {
+    color: mediumorchid; /* Darker violet color for visited links */
+}
